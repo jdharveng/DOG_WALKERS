@@ -10,10 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_26_071450) do
+ActiveRecord::Schema.define(version: 2018_06_26_142640) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "dogs", force: :cascade do |t|
+    t.string "breed"
+    t.string "name"
+    t.string "size"
+    t.string "sex"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.text "bio"
+    t.integer "age"
+    t.string "picture"
+    t.index ["user_id"], name: "index_dogs_on_user_id"
+  end
+
+  create_table "dogwalkers", force: :cascade do |t|
+    t.integer "hourly_price"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_dogwalkers_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -28,8 +50,29 @@ ActiveRecord::Schema.define(version: 2018_06_26_071450) do
     t.inet "last_sign_in_ip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "firstname"
+    t.string "lastname"
+    t.string "address_line1"
+    t.string "address_city"
+    t.string "address_code"
+    t.string "address_country"
+    t.string "picture"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "walks", force: :cascade do |t|
+    t.date "startdate"
+    t.time "startime"
+    t.integer "duration"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "dogwalker_id"
+    t.bigint "dog_id"
+    t.index ["dog_id"], name: "index_walks_on_dog_id"
+    t.index ["dogwalker_id"], name: "index_walks_on_dogwalker_id"
+  end
+
+  add_foreign_key "dogs", "users"
+  add_foreign_key "dogwalkers", "users"
 end
