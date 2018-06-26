@@ -7,5 +7,5 @@ class User < ApplicationRecord
   has_many :dogs
   has_many :dogwalkers
 
-  mount_uploader :photo, PhotoUploader
+  mount_uploader :picture, PhotoUploader
 end
