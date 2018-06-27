@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :dogs
-  has_many :dogwalkers
+  has_one :dogwalker, dependent: :destroy
 
   mount_uploader :picture, PhotoUploader
 end

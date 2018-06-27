@@ -12,6 +12,7 @@
   Dogwalker.destroy_all
   Dog.destroy_all
   User.destroy_all
+  Walk.destroy_all
 
 
   userAndreia = User.create!(
@@ -137,7 +138,7 @@ dogWhite = Dog.create!(
   sex: "Male",
   age: 4,
   bio: "I'm 4 years old, love run outside and run attached to the bike of my parents. Often I try to discover now horizons myself. So it's important, always walk with my leash Will we have a run together ?",
-  user: userEmily
+  user: userAntoine
   )
 
 puts 'Dogs Created'
@@ -150,6 +151,14 @@ puts 'Dogs Created'
   duration: 60,
   dogwalker: dogWalkSwen,
   dog: dogHatchiko
+  )
+
+  walk2 = Walk.create!(
+  startdate: '19-06-2018',
+  startime: '16:00:00',
+  duration: 60,
+  dogwalker: dogWalkMarta,
+  dog: dogRex
   )
 
 
