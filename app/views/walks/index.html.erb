@@ -1,0 +1,7 @@
+<% @walks.each do |walk| %>
+  <p>Hi dear Dogwalker, <%= walk.dogwalker.user.firstname %></p>
+  <p> Walk date: <%= walk.startdate %></p>
+  <p>at <%= walk.startime %></p>
+  <p> Dog's name : <%= walk.dog.name %> </p>
+  <p> Dog's breed: <%= walk.dog.breed %></p>
+<% end %>
