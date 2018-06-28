@@ -19,8 +19,7 @@ class WalksController < ApplicationController
   def create
     @walk = Walk.new(walk_params)
     authorize @walk
-    @dogwalker = Dogwalker.find_by(user_id:current_user.id)
-    @walk.dogwalker = @dogwalker
+    @walk.user = current_user
     @walk.dog = @dog
 
     if @walk.save
