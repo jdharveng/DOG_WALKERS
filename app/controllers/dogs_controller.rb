@@ -2,7 +2,7 @@ class DogsController < ApplicationController
   before_action :fetch_dog, except: [:index, :new, :create]
 
   def index
-    @dogs = Dog.all
+    @dogs = policy_scope(Dog).order(created_at: :desc)
   end
 
   def show
@@ -10,10 +10,12 @@ class DogsController < ApplicationController
 
   def new
     @dog = Dog.new()
+    authorize @dog
   end
 
   def create
     @dog = Dog.new(dog_params)
+    authorize @dog
     @dog.user = current_user
 
     if @dog.save
@@ -41,6 +43,7 @@ class DogsController < ApplicationController
 
   def fetch_dog
     @dog = Dog.find(params[:id])
+    authorize @dog
   end
 
   def dog_params

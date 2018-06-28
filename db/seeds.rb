@@ -27,7 +27,7 @@
   )
 
   userJerome = User.create!(
-  email:"jeromedharveng@gmail.com",
+  email:"jerome.dharveng@hotmail.com",
   password:"123456",
   firstname:"Jerome",
   lastname: "Harveng",
@@ -159,6 +159,14 @@ puts 'Dogs Created'
   duration: 60,
   dogwalker: dogWalkMarta,
   dog: dogRex
+  )
+
+  walk3 = Walk.create!(
+  startdate: '19-07-2018',
+  startime: '12:30:00',
+  duration: 60,
+  dogwalker: dogWalkJerome,
+  dog: dogWhite
   )
 
 
