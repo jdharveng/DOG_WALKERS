@@ -5,4 +5,7 @@ Rails.application.routes.draw do
   resources :dogs do
     resources :walks, except: [:index]
   end
+
+  resources :walks, only: [:index]
+
 end

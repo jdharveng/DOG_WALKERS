@@ -3,7 +3,8 @@ class WalksController < ApplicationController
   before_action :fetch_walk, only: [:show,:edit]
   def index
     # Probablment a modifier avec le search
-    @walks = Walk.where(user: current_user)
+    #@walks = @
+    @walks = policy_scope(Walk).order(created_at: :desc)
   end
 
   def show
@@ -12,10 +13,12 @@ class WalksController < ApplicationController
 
   def new
     @walk = Walk.new
+    authorize @walk
   end
 
   def create
     @walk = Walk.new(walk_params)
+    authorize @walk
     @dogwalker = Dogwalker.find_by(user_id:current_user.id)
     @walk.dogwalker = @dogwalker
     @walk.dog = @dog
@@ -35,6 +38,7 @@ class WalksController < ApplicationController
 
   def fetch_walk
     @walk = Walk.find(params[:id])
+    authorize @walk
   end
 
   def walk_params
