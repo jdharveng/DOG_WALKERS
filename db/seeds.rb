@@ -9,7 +9,6 @@
 
 #Review.destroy_all
 #  Category.destroy_all
-  Dogwalker.destroy_all
   Dog.destroy_all
   User.destroy_all
   Walk.destroy_all
@@ -93,24 +92,7 @@
   )
 
   puts 'Users created'
-# ////////////////////////////////////////////////
-  dogWalkMarta = Dogwalker.create!(
-    user: userMarta,
-    hourly_price: 70
-  )
 
-
-  dogWalkJerome = Dogwalker.create!(
-    user: userJerome,
-    hourly_price: 50
-  )
-
-  dogWalkSwen = Dogwalker.create!(
-    user: userSwen,
-    hourly_price: 60
-  )
-
-  puts 'Dogwalkers created'
 # ////////////////////////////////////////////////
 
 dogHatchiko = Dog.create!(
@@ -149,7 +131,7 @@ puts 'Dogs Created'
   startdate: '15-06-2018',
   startime: '12:00:00',
   duration: 60,
-  dogwalker: dogWalkSwen,
+  user: userSwen,
   dog: dogHatchiko
   )
 
@@ -157,7 +139,7 @@ puts 'Dogs Created'
   startdate: '19-06-2018',
   startime: '16:00:00',
   duration: 60,
-  dogwalker: dogWalkMarta,
+  user: userMarta,
   dog: dogRex
   )
 
@@ -165,7 +147,7 @@ puts 'Dogs Created'
   startdate: '19-07-2018',
   startime: '12:30:00',
   duration: 60,
-  dogwalker: dogWalkJerome,
+  user: userJerome,
   dog: dogWhite
   )
 

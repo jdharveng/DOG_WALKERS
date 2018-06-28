@@ -1,6 +1,7 @@
-<h2>Hi dear Dogwalker, <%= @walk.dogwalker.user.firstname %></h2>
+<h2>Hi dear Dogwalker, <%= @walk.user.firstname %></h2>
 <p> Walk date: <%= @walk.startdate %></p>
 <p>at <%= @walk.startime %></p>
 <p> Dog's name : <%= @walk.dog.name %> </p>
 <p> Dog's breed: <%= @walk.dog.breed %></p>
+<p> Dog's owner name: <%= @walk.dog.user.firstname %></p>
 

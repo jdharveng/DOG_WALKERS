@@ -1,8 +1,7 @@
 class WalkPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
-      scope.where(dogwalker: user)
-      raise
+      scope.where(user: user)
     end
   end
 
