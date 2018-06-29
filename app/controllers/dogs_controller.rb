@@ -3,6 +3,14 @@ class DogsController < ApplicationController
 
   def index
     @dogs = policy_scope(Dog).order(created_at: :desc)
+    #  @flats = Flat.where.not(latitude: nil, longitude: nil)
+    @markers = @dogs.map do |dog|
+      {
+        lat: dog.user.latitude,
+        lng: dog.user.longitude#,
+        # infoWindow: { content: render_to_string(partial: "/flats/map_box", locals: { flat: flat }) }
+      }
+    end
   end
 
   def show

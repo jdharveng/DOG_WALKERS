@@ -22,7 +22,8 @@
   remote_picture_url: "https://res.cloudinary.com/dcqlq9kjf/image/upload/v1530260897/Andreia.jpg",
   address_line1: "Rua Moeda 7",
   address_city: "Lisboa",
-  address_country: "Portugal"
+  address_country: "Portugal",
+  address: "Rua Moeda 7,Lisboa Portugal"
   )
 
   userJerome = User.create!(
@@ -33,7 +34,8 @@
   remote_picture_url: "https://res.cloudinary.com/dcqlq9kjf/image/upload/v1530260881/Le_Wagon_18.04.27_067.jpg",
   address_line1: "Rua Moeda 7",
   address_city: "Lisboa",
-  address_country: "Portugal"
+  address_country: "Portugal",
+  address: "Rua Moeda 7, Lisboa Portugal"
   )
 
   userPedro = User.create!(
@@ -44,7 +46,8 @@
   remote_picture_url: "https://res.cloudinary.com/dcqlq9kjf/image/upload/v1530260887/Pedro.jpg",
   address_line1: "Rua Senhora da Glória 104",
   address_city: "Lisboa",
-  address_country: "Portugal"
+  address_country: "Portugal",
+  address: "Rua Senhora da Glória 104, Lisboa Portugal"
   )
 
   userMarta = User.create!(
@@ -53,9 +56,10 @@
   firstname:"Marta",
   lastname: "Keller",
   remote_picture_url: "https://res.cloudinary.com/dcqlq9kjf/image/upload/v1530260891/Marta.jpg",
-  address_line1: "Rua Moeda 7",
+  address_line1: "Rua Moeda 1",
   address_city: "Lisboa",
-  address_country: "Portugal"
+  address_country: "Portugal",
+  address: "Rua Moeda 1, Lisboa Portugal"
   )
 
   userEmily = User.create!(
@@ -66,7 +70,8 @@
   remote_picture_url: "https://res.cloudinary.com/dcqlq9kjf/image/upload/v1530262402/Emily.jpg",
   address_line1: "Rua Constantino Fernandes 2 ",
   address_city: "Lisboa",
-  address_country: "Portugal"
+  address_country: "Portugal",
+  address: "Rua Constantino Fernandes 2, Lisboa Portugal"
   )
 
   userSwen = User.create!(
@@ -77,7 +82,8 @@
   remote_picture_url: "https://res.cloudinary.com/dcqlq9kjf/image/upload/v1530260889/Swen.jpg",
   address_line1: "Rua Manuel Marques 15",
   address_city: "Lisboa",
-  address_country: "Portugal"
+  address_country: "Portugal",
+  address: "Rua Manuel Marques 15, Lisboa Portugal"
   )
 
   userAntoine = User.create!(
@@ -88,7 +94,8 @@
   remote_picture_url: "https://res.cloudinary.com/dcqlq9kjf/image/upload/v1530262579/Antoine.jpg",
   address_line1: "Rua da Misericordia 15",
   address_city: "Lisboa",
-  address_country: "Portugal"
+  address_country: "Portugal",
+  address: "Rua da Misericordia 15, Lisboa Portugal"
   )
 
 
@@ -98,9 +105,10 @@
   firstname:"David",
   lastname: "Zwage",
   remote_picture_url: "https://res.cloudinary.com/dcqlq9kjf/image/upload/v1530260898/David.jpg",
-  address_line1: "Rua Moeda 7",
+  address_line1: "Rua Moeda 10",
   address_city: "Lisboa",
-  address_country: "Portugal"
+  address_country: "Portugal",
+  address: "Rua Moeda 10, Lisboa Portugal"
   )
 
   puts 'Users created'
