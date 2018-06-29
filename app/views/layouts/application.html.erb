@@ -12,10 +12,13 @@
   <body>
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
-    <div class="container">
+    <div class="<%= controller_name %> <%= action_name %>">
     <%= yield %>
     </div>
     <%= javascript_include_tag 'application' %>
+    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js" %>
     <%= javascript_pack_tag 'application' %>
   </body>
 </html>
+
+

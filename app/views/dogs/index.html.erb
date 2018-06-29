@@ -1,28 +1,30 @@
-
-<div class="main-controller">
-  <div class="cards-container">
-    <div class="row">
-      <% @dogs.each do |dog| %>
-        <div class="col-xs-12 col-sm-4">
-        <!-- insert <div class="card"> -->
-          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),url('<%= cl_image_path dog.picture, height: 300, width: 400, crop: :limit %> ');">
-            <div class="card-category"> <%= dog.breed %></div>
-            <div class="card-description">
-              <h2><%= dog.name %></h2>
-              <p>price / hour = <%= dog.hourly_price %></p>
+ <div class="content">
+    <div class="cards-container" >
+      <div class="row">
+        <% @dogs.each do |dog| %>
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),url('<%= cl_image_path dog.picture, height: 300, width: 400, crop: :limit %> ');">
+              <div class="card-category"> <%= dog.breed %></div>
+              <div class="card-description">
+                <h2><%= dog.name %></h2>
+                <p>price / hour = <%= dog.hourly_price %></p>
+              </div>
+              <img class="card-user" src='<%= cl_image_path dog.user.picture,width: 150, height: 150, crop: :thumb, gravity: :face %>'>
+              <a class="card-link" href="#" ></a>
             </div>
-            <img class="card-user" src='<%= cl_image_path dog.user.picture,width: 150, height: 150, crop: :thumb, gravity: :face %>'>
-            <a class="card-link" href="#" ></a>
           </div>
-        </div>
-       <% end %>
+        <% end %>
+      </div>
     </div>
+
+    <div id="map" style="width: 100%;  height: 100vh;" data-markers="<%= @markers.to_json %>"></div>
   </div>
 
-  <div id="map" style="width: 100%;  height: 600px;">
 
-  </div>
-</div>
+
+
+
+
 
 
 
