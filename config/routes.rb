@@ -8,4 +8,6 @@ Rails.application.routes.draw do
 
   resources :walks, only: [:index]
 
+  get :mydogs, to: 'dogs#mydogs'
+
 end
