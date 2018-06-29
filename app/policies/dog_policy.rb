@@ -11,6 +11,12 @@ class DogPolicy < ApplicationPolicy
     true
   end
 
+  def mydogs?
+    record.all? do |record_item|
+      record_item.user == user
+    end
+  end
+
   def create?
     true
   end

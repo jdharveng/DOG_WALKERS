@@ -1,11 +1,16 @@
 class DogsController < ApplicationController
-  before_action :fetch_dog, except: [:index, :new, :create]
+  before_action :fetch_dog, except: [:index, :new, :create, :mydogs]
 
   def index
     @dogs = policy_scope(Dog).order(created_at: :desc)
   end
 
   def show
+  end
+
+  def mydogs
+    @dogs = Dog.where(user: current_user)
+    authorize @dogs
   end
 
   def new

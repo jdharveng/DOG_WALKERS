@@ -19,7 +19,7 @@
   password:"123456",
   firstname:"Andreia",
   lastname: "Domingues",
-  # remote_picture_url: "https://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_100/v1528135116/Le_Wagon_18.04.27_039.jpg",
+  remote_picture_url: "https://res.cloudinary.com/dcqlq9kjf/image/upload/v1530260897/Andreia.jpg",
   address_line1: "Rua Moeda 7",
   address_city: "Lisboa",
   address_country: "Portugal"
@@ -30,7 +30,7 @@
   password:"123456",
   firstname:"Jerome",
   lastname: "Harveng",
-  #remote_picture_url: "https://res.cloudinary.com/pmarzagao/image/upload/v1527684917/image_2.png",
+  remote_picture_url: "https://res.cloudinary.com/dcqlq9kjf/image/upload/v1530260881/Le_Wagon_18.04.27_067.jpg",
   address_line1: "Rua Moeda 7",
   address_city: "Lisboa",
   address_country: "Portugal"
@@ -41,7 +41,7 @@
   password:"123456",
   firstname:"Pedro",
   lastname: "Marzagão",
-  #remote_picture_url: "https://res.cloudinary.com/pmarzagao/image/upload/v1527683243/Pedro_Headshot_2.jpg",
+  remote_picture_url: "https://res.cloudinary.com/dcqlq9kjf/image/upload/v1530260887/Pedro.jpg",
   address_line1: "Rua Senhora da Glória 104",
   address_city: "Lisboa",
   address_country: "Portugal"
@@ -52,7 +52,7 @@
   password:"123456",
   firstname:"Marta",
   lastname: "Keller",
-  #remote_picture_url: "https://res.cloudinary.com/pmarzagao/image/upload/v1527683260/8GaEWuxK_400x400.jpg",
+  remote_picture_url: "https://res.cloudinary.com/dcqlq9kjf/image/upload/v1530260891/Marta.jpg",
   address_line1: "Rua Moeda 7",
   address_city: "Lisboa",
   address_country: "Portugal"
@@ -63,7 +63,7 @@
   password:"123456",
   firstname:"Emily",
   lastname: "Burns",
-  #remote_picture_url: "https://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_100/v1528135035/Le_Wagon_18.04.27_064.jpg",
+  remote_picture_url: "https://res.cloudinary.com/dcqlq9kjf/image/upload/v1530262402/Emily.jpg",
   address_line1: "Rua Constantino Fernandes 2 ",
   address_city: "Lisboa",
   address_country: "Portugal"
@@ -74,7 +74,7 @@
   password:"123456",
   firstname:"Swen",
   lastname: "Kunzel",
-  #remote_picture_url: "https://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_100/v1528135086/Le_Wagon_18.04.27_016.jpg",
+  remote_picture_url: "https://res.cloudinary.com/dcqlq9kjf/image/upload/v1530260889/Swen.jpg",
   address_line1: "Rua Manuel Marques 15",
   address_city: "Lisboa",
   address_country: "Portugal"
@@ -85,8 +85,20 @@
   password:"123456",
   firstname:"Antoine",
   lastname: "Quellier",
-  #remote_picture_url: "https://res.cloudinary.com/pmarzagao/image/upload/c_scale,w_100/v1528135017/Le_Wagon_18.04.27_045.jpg",
+  remote_picture_url: "https://res.cloudinary.com/dcqlq9kjf/image/upload/v1530262579/Antoine.jpg",
   address_line1: "Rua da Misericordia 15",
+  address_city: "Lisboa",
+  address_country: "Portugal"
+  )
+
+
+  userDavid = User.create!(
+  email:"david@gmail.com",
+  password:"123456",
+  firstname:"David",
+  lastname: "Zwage",
+  remote_picture_url: "https://res.cloudinary.com/dcqlq9kjf/image/upload/v1530260898/David.jpg",
+  address_line1: "Rua Moeda 7",
   address_city: "Lisboa",
   address_country: "Portugal"
   )
@@ -96,12 +108,14 @@
 # ////////////////////////////////////////////////
 
 dogHatchiko = Dog.create!(
-  name: "Hatchiko",
+  name: "Hatchi",
   breed: "Akita Inu",
   sex: "Female",
   age: 5,
+  hourly_price: 10,
   bio: "I'm 5 years old, love being lazy and therefore sleep big part of the day. But I love to have a walk too. Will we have a walk together ?",
-  user: userJerome
+  user: userJerome,
+  remote_picture_url:"https://res.cloudinary.com/dcqlq9kjf/image/upload/v1530268753/DogWalker/Akita.jpg"
   )
 
 dogRex = Dog.create!(
@@ -109,8 +123,10 @@ dogRex = Dog.create!(
   breed: "German shepherd",
   sex: "Male",
   age: 3,
+  hourly_price: 5,
   bio: "I'm 3 years old, love going outside and I'm quite clever, to understand my human friends. Will we have a walk together ?",
-  user: userEmily
+  user: userEmily,
+  remote_picture_url:"https://res.cloudinary.com/dcqlq9kjf/image/upload/v1530268753/DogWalker/German_shepherd.jpg"
   )
 
 
@@ -119,9 +135,69 @@ dogWhite = Dog.create!(
   breed: "Husky",
   sex: "Male",
   age: 4,
+  hourly_price: 5,
   bio: "I'm 4 years old, love run outside and run attached to the bike of my parents. Often I try to discover now horizons myself. So it's important, always walk with my leash Will we have a run together ?",
-  user: userAntoine
+  user: userAntoine,
+  remote_picture_url:"https://res.cloudinary.com/dcqlq9kjf/image/upload/v1530268744/DogWalker/Husky.jpg"
   )
+
+dogRocky = Dog.create!(
+  name: "Rocky",
+  breed: "Jack Russel",
+  sex: "Male",
+  age: 7,
+  hourly_price: 5,
+  bio: "I'm 7 years old, I enjoy long walks near to my home. Will we have a walk together ?",
+  user: userSwen,
+  remote_picture_url:"https://res.cloudinary.com/dcqlq9kjf/image/upload/v1530268821/DogWalker/JackRusselTerrier.jpg"
+  )
+
+dogHarley = Dog.create!(
+  name: "Harley",
+  breed: "Dalmatian",
+  sex: "Male",
+  age: 7,
+  hourly_price: 5,
+  bio: "I'm 2 years old, I'm pretty and I know it ;). I love running in the woods. Will we have a walk together ?",
+  user: userDavid,
+  remote_picture_url:"https://res.cloudinary.com/dcqlq9kjf/image/upload/v1530268752/DogWalker/Dalmatian.jpg"
+  )
+
+dogSam = Dog.create!(
+  name: "Sam",
+  breed: "Labrador",
+  sex: "Male",
+  age: 8,
+  hourly_price: 5,
+  bio: "I'm 8 years old, even if I'm not that young anymore, I still love the fresh air of nice walks. I love running in the woods. Will we have a walk together ?",
+  user: userMarta,
+  remote_picture_url:"https://res.cloudinary.com/dcqlq9kjf/image/upload/v1530268791/DogWalker/Labrador.jpg"
+  )
+
+dogMolly = Dog.create!(
+  name: "Molly",
+  breed: "Beagle",
+  sex: "Female",
+  age: 1,
+  hourly_price: 5,
+  bio: "I'm 1 years old, I'm small and cute. I love playing around during a walk. Will we have a walk together ?",
+  user: userMarta,
+  remote_picture_url:"https://res.cloudinary.com/dcqlq9kjf/image/upload/v1530268760/DogWalker/Beagle.jpg"
+  )
+
+dogOscar = Dog.create!(
+  name: "Oscar",
+  breed: "Mastiff",
+  sex: "Male",
+  age: 6,
+  hourly_price: 15,
+  bio: " Even if I look like a bear, I'm as nice as a Teddy one. I enjoy looking around while walking with my friends.  Will we have a walk together ?",
+  user: userSwen,
+  remote_picture_url:"https://res.cloudinary.com/dcqlq9kjf/image/upload/v1530268941/DogWalker/Mastiff.jpg"
+  )
+
+
+
 
 puts 'Dogs Created'
 
