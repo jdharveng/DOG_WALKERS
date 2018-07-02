@@ -1,2 +1,164 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<%= content_for(:navbar_class, "navbar-home") %>
+
+<div class="banner">
+  <div class="banner-content text-center">
+    <h1>Let's walk your Dog</h1>
+    <p>We bring Dogwalkers in contact with you</p>
+    <%= link_to "Start now", new_user_session_path, class: "btn btn-lg btn-primary"  %>
+  </div>
+</div>
+
+
+<div class="wrapper value-proposition">
+   <div class="container-fluid">
+
+    <div class="dog-rows">
+      <div class="row">
+        <div class="col-xs-12 col-md-offset-1 col-md-4">
+          <!-- This div is centered and takes 4 columns -->
+          <div class="card-home" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),url('<%= cl_image_path "DogWalker/SadET", height: 350, width: 450, crop: :fit %> ');">
+             <a class="card-link" href="#" ></a>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-6">
+          <!-- This div is centered and takes 4 columns -->
+          <div class="home-item text-center">
+            <p>Tired to see you're Dog Sad, when you're back home ...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dog-rows">
+      <div class="row">
+        <div class="col-xs-12 col-md-offset-1 col-md-6">
+          <!-- This div is centered and takes 4 columns -->
+          <div class="home-item text-center">
+            <p>... or Mad at you</p>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-md-4">
+          <!-- This div is centered and takes 4 columns -->
+          <div class="card-home" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),url('<%= cl_image_path "DogWalker/Sad_Bouledog", height: 350, width: 450, crop: :fit %> ');">
+                <a class="card-link" href="#" ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dog-rows">
+      <div class="row">
+        <div class="col-xs-12 col-md-offset-1 col-md-4">
+          <!-- This div is centered and takes 4 columns -->
+          <div class="card-home" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),url('<%= cl_image_path "DogWalker/DogsFaceTime", height: 350, width: 450, crop: :fit %> ');">
+          <a class="card-link" href="#" ></a>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-6">
+          <!-- This div is centered and takes 4 columns -->
+          <div class="home-item text-center">
+            <p> Skyping with him could be an option :)...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dog-rows">
+      <div class="row">
+        <div class="col-xs-12 col-md-offset-1 col-md-6">
+          <!-- This div is centered and takes 4 columns -->
+          <div class="home-item text-center">
+            <p>... And you dream to see him like this ...</p>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-md-4">
+          <!-- This div is centered and takes 4 columns -->
+          <div class="card-home" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),url('<%= cl_image_path "DogWalker/HappyDog", height: 350, width: 450, crop: :fit %> ');">
+                <a class="card-link" href="#" ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dog-rows message">
+      <div class="row">
+        <div class="col-xs-12 col-md-offset-2 col-md-8">
+          <!-- This div is centered and takes 4 columns -->
+          <div class="home-item slogan text-center">
+            <p>We are here to help both of you</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dog-rows">
+      <div class="row">
+        <div class="col-xs-12 col-md-4">
+          <!-- This div is centered and takes 4 columns -->
+          <div class="card-home" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),url('<%= cl_image_path "DogWalker/dogs_handshake", height: 280, width: 350, crop: :fill %> ');">
+            <a class="card-link" href="#" ></a>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-md-4">
+          <!-- This div is centered and takes 4 columns -->
+          <div class="card-home" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),url('<%= cl_image_path "DogWalker/Zenitude", height: 300, width: 400, crop: :fit %> ');">
+            <a class="card-link" href="#" ></a>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-md-4">
+          <!-- This div is centered and takes 4 columns -->
+          <div class="card-home" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),url('<%= cl_image_path "DogWalker/dog_girl", height: 300, width: 400, crop: :fit %> ');">
+            <a class="card-link" href="#" ></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="wrapper-testimonials">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+          <div class="testimonials">
+            <div class="testimonials-title">
+              <h2>Testimonials</h2>
+            </div>
+            <div class="testimonials-list">
+                <div class="testimonial-card">
+                    <figure class="snip1192">
+                      <blockquote>Andreia: I found finally peace of mind back when I'm at work, I know that my Molly will get some fresh air, and have a nice walk. </blockquote>
+                      <div class="author">
+                        <!-- <img src="http://res.cloudinary.com/pmarzagao/image/upload/v1527683260/8GaEWuxK_400x400.jpg"/> -->
+                      <%= cl_image_tag "es8jqbsuejdenju5kkz5",width: 150, height: 150, crop: :thumb, gravity: :face %>
+                      </div>
+                </div>
+                <div class="testimonial-card">
+                    <figure class="snip1192">
+                      <blockquote>Pedro: Now it's easier when coming back after a long day of work, I can enjoy my dog. He's much more quite and happy </blockquote>
+                      <div class="author">
+                      <%= cl_image_tag "udjv1ndhose7r6gafaoe",width: 150, height: 150, crop: :thumb, gravity: :face %>
+                      </div>
+                </div>
+                <div class="testimonial-card">
+                    <figure class="snip1192">
+                      <blockquote>Jerôme: Don't need to be stressed anymore for Hatchi, I know his Dogwalker, it's a nice guy. Hatchi is between good hands, what a relief ... </blockquote>
+                      <div class="author">
+                         <%= cl_image_tag "g2shadwjdqd7bm6l0nvs",width: 150, height: 150, crop: :thumb, gravity: :face %>
+                      </div>
+                </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

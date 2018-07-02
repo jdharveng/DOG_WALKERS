@@ -1,1 +1,55 @@
 // Specific CSS for your home-page
+
+.value-proposition{
+  // background-color: #E8E8E8;
+  background-color: #f2f2f0 !important;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.dog-rows{
+  margin: 30px;
+}
+
+.dog-rows.message{
+  margin: 100px;
+}
+
+
+.home-item {
+  border-radius:15px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  p{
+    font-family: 'Indie Flower', cursive;
+    font-size: 30px;
+  }
+}
+
+  .home-item.slogan{
+    p{
+      font-size:50px;
+    }
+  }
+
+
+.testimonials-list {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.wrapper-testimonials{
+  background-color:#ebebeb !important;
+}
+
+.testimonials-title{
+  text-align: center;
+  h2{
+  font-weight:100 !important;
+  }
+}
+
