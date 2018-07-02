@@ -4,5 +4,6 @@ import initMap from '../components/map';
 const indexPage = document.querySelector('.dogs.index');
 if (indexPage) {
   const mapElement = document.getElementById('map');
-  initMap(mapElement);
+  const cards = document.querySelectorAll('.card');
+  initMap(mapElement, cards);
 }
