@@ -10,7 +10,8 @@
                 <p>price / hour = <%= dog.hourly_price %></p>
               </div>
               <img class="card-user" src='<%= cl_image_path dog.user.picture,width: 150, height: 150, crop: :thumb, gravity: :face %>'>
-              <a class="card-link" href="#" ></a>
+              <!-- <a class="card-link" href= ></a> -->
+              <%= link_to '', dog, class: "card-link" %>
             </div>
           </div>
         <% end %>

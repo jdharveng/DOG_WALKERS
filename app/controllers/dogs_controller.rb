@@ -14,6 +14,14 @@ class DogsController < ApplicationController
   end
 
   def show
+
+        @marker = [
+      {
+        lat: @dog.user.latitude,
+        lng: @dog.user.longitude#,
+        # infoWindow: { content: render_to_string(partial: "/flats/map_box", locals: { flat: flat }) }
+      }
+    ]
   end
 
   def mydogs
