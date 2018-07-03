@@ -1,0 +1,60 @@
+.wrapper-dog-info{
+  display: flex;
+}
+
+.card-mapContainer{
+  margin: 50px;
+}
+
+.dog-left-show{
+  padding: 30px;
+  margin-right: 20px;
+}
+
+.dog-details-price{
+  background-color: forestgreen;
+  color: white;
+  padding: 10px 15px  ;
+  border-radius: 5px;
+  p{
+    margin:0px;
+  }
+}
+
+.dog-breed-price{
+  display:flex;
+  justify-content: space-between;
+}
+
+.dog-details-breed{
+  padding:15px;
+}
+
+.dog-details-name{
+  h1{
+    font-size: 35px;
+  }
+}
+
+.dog-bio{
+  padding: 20px;
+}
+
+.dog-datepicker{
+  padding:20px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.15);
+}
+
+.flatpickr-input{
+    max-width: 320px;
+    outline: none;
+    border: 1px solid rgba(0,0,0,0.15);
+    border-radius: 3px;
+    color: #444;
+    padding: 0 0 0 11px;
+    height: 40px;
+    width: 100%;
+    font-size: 14px;
+    margin-right: 0;
+  }
