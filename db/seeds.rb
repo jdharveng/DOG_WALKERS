@@ -212,7 +212,7 @@ puts 'Dogs Created'
 # ////////////////////////////////////////////////
 
  walk1 = Walk.create!(
-  startdate: '15-06-2018',
+  date_begin: '15-06-2018',
   startime: '12:00:00',
   duration: 60,
   user: userSwen,
@@ -220,7 +220,7 @@ puts 'Dogs Created'
   )
 
   walk2 = Walk.create!(
-  startdate: '19-06-2018',
+  date_begin: '19-06-2018',
   startime: '16:00:00',
   duration: 60,
   user: userMarta,
@@ -228,7 +228,7 @@ puts 'Dogs Created'
   )
 
   walk3 = Walk.create!(
-  startdate: '19-07-2018',
+  date_begin: '19-07-2018',
   startime: '12:30:00',
   duration: 60,
   user: userJerome,
