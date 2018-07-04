@@ -18,16 +18,12 @@ if (showPage) {
   const mapElement = document.getElementById('map-show');
   initMapShow(mapElement);
 
-  // const startDateinput = document.getElementById('walk_date_begin');
-  // const endDateinput = document.getElementById('walk_date_end');
-  // initDate(startDateinput, endDateinput);
+  const startDateinput = document.getElementById('walk_date_begin');
+  const endDateinput = document.getElementById('walk_date_end');
+  initDate(startDateinput, endDateinput);
 }
 
-if (showPage) {
-  const startDateinput = flatpickr("#walk_date_begin", { minDate: new Date() });
-  const endDateinput = flatpickr("#walk_date_end", { minDate: new Date() });
-  dogDate(startDateinput, endDateinput);
-}
+
 
 
 
