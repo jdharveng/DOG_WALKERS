@@ -31,6 +31,11 @@
         <div class="dog-bio">
           <p> <%= @dog.bio %> </p>
         </div>
+
+        <% if policy(@dog).update? %>
+          <%= link_to "Edit Dog Information", edit_dog_path(@dog), class:"btn btn-primary" %>
+          <%= link_to "Remove my Dog", dog_path(@dog), method: :delete, data: { confirm: "Are you sure?" }, class:"btn btn-warning" %>
+        <% end %>
       </div>
     </div>
     <div class="dog-datepicker">
@@ -38,6 +43,7 @@
     </div>
   </div>
 </div>
+
 
 
 

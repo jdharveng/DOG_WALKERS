@@ -1,7 +1,7 @@
 
 <h2>Hi dear Dogwalker, <%= current_user.firstname %></h2>
 <% @walks.each do |walk| %>
-  <p> Walk date: <%= walk.startdate %></p>
+  <p> Walk date: <%= walk.date_begin %></p>
   <p>at <%= walk.startime %></p>
   <p> Dog's name : <%= walk.dog.name %> </p>
   <p> Dog's breed: <%= walk.dog.breed %></p>

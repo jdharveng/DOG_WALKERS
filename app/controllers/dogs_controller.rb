@@ -57,6 +57,7 @@ class DogsController < ApplicationController
 
   def destroy
     @dog.destroy
+    redirect_to dogs_path
   end
 
 
@@ -68,6 +69,6 @@ class DogsController < ApplicationController
   end
 
   def dog_params
-    params.require(:dog).permit(:name, :breed, :sex, :size, :bio, :age, :picture)
+    params.require(:dog).permit(:name, :breed, :sex, :size, :bio, :age, :picture,:hourly_price)
   end
 end

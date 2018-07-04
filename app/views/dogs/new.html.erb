@@ -1,4 +1,11 @@
 <div class="container">
-  <%= render 'form', dog: @dog %>
-  <%= link_to 'back to Dogs', dogs_path  %>
+  <div class="row">
+    <div class="col-xs-12 col-sm-offset-2 col-sm-8">
+      <div class="dog-card">
+        <%= render 'form', dog: @dog %>
+        <%= link_to 'back to Dogs', dogs_path  %>
+      </div>
+    </div>
+  </div>
 </div>
+
