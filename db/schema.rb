@@ -10,10 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_03_112204) do
+ActiveRecord::Schema.define(version: 2018_07_11_091952) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "chats", force: :cascade do |t|
+    t.integer "sender_id"
+    t.integer "recipient_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "dogs", force: :cascade do |t|
     t.string "breed"
@@ -28,6 +35,16 @@ ActiveRecord::Schema.define(version: 2018_07_03_112204) do
     t.string "picture"
     t.integer "hourly_price"
     t.index ["user_id"], name: "index_dogs_on_user_id"
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.text "body"
+    t.bigint "user_id"
+    t.bigint "chat_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["chat_id"], name: "index_messages_on_chat_id"
+    t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -64,12 +81,16 @@ ActiveRecord::Schema.define(version: 2018_07_03_112204) do
     t.integer "duration"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "dogwalker_id"
     t.bigint "dog_id"
     t.bigint "user_id"
     t.date "date_end"
     t.index ["dog_id"], name: "index_walks_on_dog_id"
+    t.index ["dogwalker_id"], name: "index_walks_on_dogwalker_id"
     t.index ["user_id"], name: "index_walks_on_user_id"
   end
 
   add_foreign_key "dogs", "users"
+  add_foreign_key "messages", "chats"
+  add_foreign_key "messages", "users"
 end
