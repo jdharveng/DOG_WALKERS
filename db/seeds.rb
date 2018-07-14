@@ -9,9 +9,11 @@
 
 #Review.destroy_all
 #  Category.destroy_all
+  Chat.destroy_all
   Dog.destroy_all
   User.destroy_all
   Walk.destroy_all
+
 
 
   userAndreia = User.create!(
@@ -238,6 +240,21 @@ puts 'Dogs Created'
 
 
  puts 'Walks created'
+
+
+ # /////////////////////////////////////////////////
+
+ ch1 = Chat.create(sender_id: userJerome.id, recipient_id:userSwen.id);
+ ch2 = Chat.create(sender_id:userJerome.id, recipient_id: userPedro.id );
+
+ msg1 = Message.create(body: "Hoy Swen", user_id: userJerome.id, chat_id: ch1.id);
+ msg2 = Message.create(body: "How are you?", user_id: userJerome.id, chat_id: ch1.id);
+ msg3 = Message.create(body: "Fine Jé, what are you doing?", user_id: userSwen.id, chat_id: ch1.id);
+ msg4 = Message.create(body: "Hello Pedro?", user_id: userJerome.id, chat_id: ch2.id);
+ msg5 = Message.create(body: "Did you watch the match?", user_id: userPedro.id, chat_id: ch2.id);
+
+
+ puts 'Chats and messages created'
 
 
 

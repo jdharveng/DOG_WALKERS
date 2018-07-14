@@ -11,4 +11,16 @@ class User < ApplicationRecord
   after_validation :geocode, if: :will_save_change_to_address?
 
   mount_uploader :picture, PhotoUploader
+
+  def full_name
+    "#{firstname} #{lastname}"
+  end
+
+  def sender?(conversation)
+    self == conversation.sender
+  end
+
+  def recipient?(conversation)
+    self == conversation.recipient
+  end
 end

@@ -10,4 +10,10 @@ Rails.application.routes.draw do
 
   get :mydogs, to: 'dogs#mydogs'
 
+  resources :chats, only: [:index, :show, :create] do
+    resources :messages, only: [:index, :create]
+  end
+
+  mount ActionCable.server => '/cable'
+
 end

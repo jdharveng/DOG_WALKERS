@@ -2,8 +2,10 @@ import "bootstrap";
 import './application.css';
 import initMap from '../components/map';
 import initMapShow from '../components/mapshow';
-import initDate from '../components/datepickr'
-
+import initDate from '../components/datepickr';
+import submitMessage from '../components/message-form.js';
+import sendButton from '../components/message-form.js';
+import '../components/messages.js';
 
 const indexPage = document.querySelector('.dogs.index');
 if (indexPage) {
@@ -23,6 +25,12 @@ if (showPage) {
   initDate(startDateinput, endDateinput);
 }
 
+
+const showChats = document.querySelector('.chats.show');
+if(showChats) {
+  const form = document.getElementById('new_message');
+  sendButton(form);
+}
 
 
 
