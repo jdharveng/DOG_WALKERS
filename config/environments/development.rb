@@ -12,6 +12,9 @@ Rails.application.configure do
   # Do not eager load code on boot.
   config.eager_load = false
 
+  # ActionCable set up for chats
+  config.action_cable.url = "ws://localhost:3000/cable"
+
   # Show full error reports.
   config.consider_all_requests_local = true
 

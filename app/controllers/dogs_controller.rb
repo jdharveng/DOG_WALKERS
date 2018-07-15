@@ -22,6 +22,7 @@ class DogsController < ApplicationController
       # infoWindow: { content: render_to_string(partial: "/flats/map_box", locals: { flat: flat }) }
     }
     ]
+
   end
 
   def mydogs
