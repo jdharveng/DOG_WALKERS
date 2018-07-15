@@ -15,7 +15,16 @@ class ChatsController < ApplicationController
   end
 
   def create
-    @chat = Chat.between(params[:sender_id], params[:recipient_id]).first_or_create!(chat_params)
+    duo = params[:duo]
+    sender_id = duo[:sender_id]
+    recipient_id = duo[:recipient_id]
+    @chat = Chat.between(sender_id, recipient_id).first
+
+    if !@chat
+      @chat = Chat.create!(sender_id: sender_id, recipient_id: recipient_id)
+    end
+   # @chat = Chat.between(sender_id, recipient_id).first_or_create!(sender_id, recipient_id)
+
     authorize @chat
     redirect_to @chat
   end
@@ -23,6 +32,6 @@ class ChatsController < ApplicationController
   private
 
   def chat_params
-    params.permit(:sender_id, :recipient_id)
+    params.permit(:duo, :sender_id, :recipient_id)
   end
 end

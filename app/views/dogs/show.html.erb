@@ -37,6 +37,10 @@
           <%= link_to "Remove my Dog", dog_path(@dog), method: :delete, data: { confirm: "Are you sure?" }, class:"btn btn-warning" %>
         <% end %>
       </div>
+
+      <%= link_to 'Do you want to chat with my Master?', chats_path(:duo => {:sender_id => @dog.user.id,
+        :recipient_id =>  current_user.id}), method: :post, class: "btn btn-primary btn-lg"%>
+
     </div>
     <div class="dog-datepicker">
       <%= render 'formdate', walk: @walk %>

@@ -246,12 +246,16 @@ puts 'Dogs Created'
 
  ch1 = Chat.create(sender_id: userJerome.id, recipient_id:userSwen.id);
  ch2 = Chat.create(sender_id:userJerome.id, recipient_id: userPedro.id );
+ ch3 = Chat.create(sender_id:userJerome.id, recipient_id: userDavid.id );
+ ch4 = Chat.create(sender_id:userJerome.id, recipient_id: userMarta.id );
 
  msg1 = Message.create(body: "Hoy Swen", user_id: userJerome.id, chat_id: ch1.id);
  msg2 = Message.create(body: "How are you?", user_id: userJerome.id, chat_id: ch1.id);
  msg3 = Message.create(body: "Fine Jé, what are you doing?", user_id: userSwen.id, chat_id: ch1.id);
  msg4 = Message.create(body: "Hello Pedro?", user_id: userJerome.id, chat_id: ch2.id);
  msg5 = Message.create(body: "Did you watch the match?", user_id: userPedro.id, chat_id: ch2.id);
+ msg6 = Message.create(body: "Hoi David?", user_id: userDavid.id, chat_id: ch3.id);
+ msg7 = Message.create(body: "Hoi Marta?", user_id: userMarta.id, chat_id: ch4.id);
 
 
  puts 'Chats and messages created'
