@@ -10,7 +10,7 @@ function scrollToBottom(element) {
 const messages = document.querySelector('.messages');
 
 if (messages) {
-  const content = messages.querySelector(".messages--content");
+  const content = messages.querySelector(".message-content");
 
   scrollToBottom(content);
 

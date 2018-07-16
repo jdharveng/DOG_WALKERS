@@ -21,6 +21,7 @@ const sendButton = function(form){
     // You can send a message with cmd/ctrl+enter
     inputMessage.addEventListener('keydown', event => {
       if (event.keyCode === 13 && event.metaKey) {
+        console.log('Eventlistener keydow ');
         event.preventDefault();
         submitMessage(inputMessage, inputChatId);
       }
@@ -28,6 +29,7 @@ const sendButton = function(form){
 
     // Or by cicking a button
     submit.addEventListener('click', event => {
+       console.log('Eventlistener click ');
       event.preventDefault();
       submitMessage(inputMessage, inputChatId);
     });
