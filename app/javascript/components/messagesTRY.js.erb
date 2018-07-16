@@ -20,12 +20,9 @@ if (messages) {
   // Telling `chat.js` to call this piece of code whenever a new message is received
   // over ActionCable
   setCallback(message => {
-    content.insertAdjacentHTML("beforeend", message);
-
-    //content.insertAdjacentHTML('beforeend', '<%= j render "message", message: @message, user_is_messages_author: true %>');
+    //content.insertAdjacentHTML("beforeend", message);
+    content.insertAdjacentHTML('beforeend', '<%= j render "../../views/messages/messages", message: content, user_is_messages_author: true %>');
 
     scrollToBottom(content);
   });
 }
-
-

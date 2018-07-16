@@ -5,6 +5,7 @@ import initMapShow from '../components/mapshow';
 import initDate from '../components/datepickr';
 import submitMessage from '../components/message-form.js';
 import sendButton from '../components/message-form.js';
+//import '../components/messages.js.erb';
 import '../components/messages.js';
 
 const indexPage = document.querySelector('.dogs.index');

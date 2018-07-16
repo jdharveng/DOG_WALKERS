@@ -8,7 +8,6 @@ class ChatChannel < ApplicationCable::Channel
   # Called when message-form contents are received by the server
   def send_message(payload)
     message = Message.new(user: current_user, chat_id: payload["id"], body: payload["message"])
-
     ActionCable.server.broadcast "chat_#{payload['id']}", message: render(message)  if message.save
 
   end
@@ -22,7 +21,10 @@ class ChatChannel < ApplicationCable::Channel
   def render(message)
     ApplicationController.render(
           partial: 'messages/messages',
-          locals: {message: message}
+          locals: {message: message, user_is_messages_author: false },
+          current_user_id: message.id
       )
   end
 end
+
+
