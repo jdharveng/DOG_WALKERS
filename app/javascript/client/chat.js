@@ -11,6 +11,7 @@ const chat = createChannel('ChatChannel', {
 // Sending a message: "perform" method calls a respective Ruby method
 // defined in chat_channel.rb. That's your bridge between JS and Ruby!
 function sendMessage(message, chatId) {
+  console.log("We are in the sendMessage method");
   chat.perform("send_message", { message: message, id: chatId });
 }
 

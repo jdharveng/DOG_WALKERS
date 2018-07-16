@@ -1,4 +1,4 @@
-<div class="message">
+<div class="message <%= user_is_messages_author ? "right" : "" %>">
   <div class="message--header">
     <span class="message--author">
       <%= message.user.firstname %>
@@ -7,7 +7,7 @@
       <%= message.message_time %>
     </span>
   </div>
-  <div class="message--text">
+  <div class="message-content">
     <% message.body.lines.each do |line| %>
       <p><%= line %></p>
     <% end %>
